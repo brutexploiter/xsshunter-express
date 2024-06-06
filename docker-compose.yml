@@ -24,11 +24,6 @@ services:
       # Whether or not to enable email notifications via
       # SMTP for XSS payload fires.
       - SMTP_EMAIL_NOTIFICATIONS_ENABLED=true
-      - SMTP_HOST=smtp.gmail.com
-      - SMTP_PORT=465
-      - SMTP_USE_TLS=true
-      - SMTP_USERNAME=YourEmail@gmail.com
-      - SMTP_PASSWORD=YourEmailPassword
       - SMTP_FROM_EMAIL=YourEmail@gmail.com
       - SMTP_RECEIVER_EMAIL=YourEmail@gmail.com
       # THERE IS NO NEED TO MODIFY BELOW THIS LINE
