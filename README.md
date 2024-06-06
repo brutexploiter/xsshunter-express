@@ -9,7 +9,7 @@ The fastest way to set up XSS Hunter to test and find blind cross-site scripting
 * `docker` and `docker-compose` installed
 * Host with at least 2 GB of RAM
 * A hostname (e.g. `host.example.com`) which you can map to your server's IP (have DNS control for)
-* *[For Email Notifications]* To receive email notifications of XSS payload fires you'll need an email account with valid SMTP credentials. You can use many regular email accounts like Gmail for this purpose. This is not required if you don't want email notifications.
+* *[For Email Notifications (Sendgrid API)]* To receive email notifications of XSS payload fires you'll need an Sendgrid API Key.This is not required if you don't want email notifications.
 
 ### Configuring Your Instance
 To set up XSS Hunter Express, modify the [`docker-compose.yaml`](https://github.com/mandatoryprogrammer/xsshunter-express/blob/main/docker-compose.yml) file with your appropriate settings/passwords/etc.
@@ -22,11 +22,6 @@ The following are some YAML fields (in [`docker-compose.yaml`](https://github.co
 The following are needed if you want email notifications:
 
 * `SMTP_EMAIL_NOTIFICATIONS_ENABLED`: Leave enabled to receive email notifications (you must set this up via the below configurations as well).
-*  `SMTP_HOST`: The host of your SMTP server where your email account is hosted (e.g. `smtp.gmail.com`).
-* `SMTP_PORT`: The port of your SMTP server (e.g. `465`).
-* `SMTP_USE_TLS`: Utilize TLS if your SMTP server supports it.
-* `SMTP_USERNAME`: The username of the email account on your SMTP server (e.g. `exampleuser`).
-* `SMTP_PASSWORD`: The password of the email account on your SMTP server (e.g. `Password1!`).
 * `SMTP_FROM_EMAIL`: The email address of your email account on the SMTP server (e.g. `exampleuser@gmail.com`).
 * `SMTP_RECEIVER_EMAIL`: What email the notifications will be sent to. This may be the same as the above but could be different.
 
